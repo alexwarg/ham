@@ -1326,6 +1326,7 @@ sub cmd_info
     print colored("$p->{name}: in $p->{path}\n", 'bold');
     my $remote_branch = $p->{revision};
     $remote_branch = "<unknown branch>" unless defined $remote_branch;
+    $head = "<unknown>" unless defined $head;
     print "  remote: $p->{remote} @ branch ".colored($remote_branch, 'yellow')."\n";
     print "  local revision: ".colored($head, 'yellow')."\n";
     my $s = $p->status;
